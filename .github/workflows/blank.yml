@@ -41,15 +41,10 @@ jobs:
           args: zip -qq -r vendor.zip install_server.bat bin mods
       - name: Run a one-line script
         run: ls -a
-      - uses: actions/upload-artifact@v3
-        with:
-          name: vendor
-          path: vendor.zip
-
       - name: Upload binaries to release
         uses: svenstaro/upload-release-action@2.6.1
         with:
-          file: vendor.zip
+          file: install_server.bat bin mods
           asset_name: dolf_create
           overwrite: true
           body: "This is my release text"
