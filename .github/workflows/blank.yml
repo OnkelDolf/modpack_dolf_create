@@ -47,7 +47,7 @@ jobs:
       - name: Upload binaries to release
         uses: svenstaro/upload-release-action@2.6.1
         with:
-          file: install_server.bat bin mods
+          file: vendor.zip
           asset_name: dolf_create
           overwrite: true
           body: "This is my release text"
